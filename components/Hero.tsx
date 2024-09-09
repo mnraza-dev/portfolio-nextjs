@@ -36,7 +36,7 @@ const HeroSection = () => {
             words={words}
           />
           <p className="text-center md:tracking-wider text-blue-100 mt-2 mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I'm MN Raza a Next JS Developer based in India.
+            Hi, I&apos;m MN Raza a Next JS Developer based in India.
           </p>
 
           <a href="#about">
