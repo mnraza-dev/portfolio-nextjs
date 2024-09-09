@@ -176,6 +176,6 @@ export const BackgroundGradientAnimation = ({
           ></div>
         )}
       </div>
-    </div>s
+    </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import { FaExternalLinkAlt, FaLocationArrow } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const HeroSection = () => {
   const words = `Transfroming Concept Into Seamless User Experiences`;
