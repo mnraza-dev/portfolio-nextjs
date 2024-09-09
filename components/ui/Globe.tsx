@@ -115,7 +115,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   const _buildData = () => {
     const arcs = data;
-    let points = [];
+    const points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -158,6 +158,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
         .hexPolygonColor((e) => {
+          console.log(e);
+          
           return defaultProps.polygonColor;
         });
       startAnimation();

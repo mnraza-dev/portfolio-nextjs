@@ -64,6 +64,10 @@ export const BentoGridItem = ({
     const text = "mnraza1907@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
@@ -79,7 +83,7 @@ export const BentoGridItem = ({
       }}
     >
       {/* add img divs */}
-      <div className={`${id === 6 && "flex justify-center h-[400px]"} h-full`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -106,14 +110,15 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="w-full relative z-50 inset-0 flex items-center justify-center h-[200px] text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+            <div className="w-full relative z-50 inset-0 flex items-center justify-center  text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
         <div
           className={cn(
             titleClassName,
-            ` group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10  ${id===6 && "absolute inset-0"}`
+            ` group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 
+            }`
           )}
         >
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
