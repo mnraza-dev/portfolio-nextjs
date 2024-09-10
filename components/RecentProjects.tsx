@@ -2,7 +2,6 @@ import { projects } from "@/data";
 import Image from "next/image";
 import React from "react";
 import { PinContainer } from "./ui/3DPin";
-import { div } from "framer-motion/client";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const RecentProjects = () => {
@@ -40,7 +39,7 @@ const RecentProjects = () => {
               <div className="flex justify-between mt-7  mb-3  items-center">
                 <div className="flex items-center">
                   {iconLists.map((icon, index) => (
-                    <div
+                    <div key={index}
                       className="border rounded-full border-white/[0.1] 
                     bg-black lg:w-10 lg:h-10 w-10 h-10 flex justify-center items-center"
                       style={{
