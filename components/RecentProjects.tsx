@@ -12,7 +12,7 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap justify-center items-center p-4 mt-10 gap-x-24 gap-y-0">
-        {projects.map(({ img, title, id, des, iconLists, link }) => (
+        {projects.map(({ img, video, title, id, des, iconLists, link }) => (
           <div
             key={id}
             className="lg:min-h-[32.5rem] h-[32.5rem]   flex flex-col justify-center items-center sm:w-[570px] w-[80vw]  "
@@ -22,13 +22,15 @@ const RecentProjects = () => {
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d] ">
                   <img src={"/bg.png"} alt={"background"} />
                 </div>
-                <Image
-                  className="z-10 absolute bottom-0"
-                  src={img}
-                  alt={title}
-                  width={500}
-                  height={400}
-                />
+               
+                  <Image
+                    className="z-10 absolute bottom-0"
+                    src={img}
+                    alt={title}
+                    width={500}
+                    height={400}
+                  />
+                
               </div>
               <h1 className="line-clamp-1 text-base lg:text-2xl md:text-xl  font-bold">
                 {title}
@@ -39,7 +41,8 @@ const RecentProjects = () => {
               <div className="flex justify-between mt-7  mb-3  items-center">
                 <div className="flex items-center">
                   {iconLists.map((icon, index) => (
-                    <div key={index}
+                    <div
+                      key={index}
                       className="border rounded-full border-white/[0.1] 
                     bg-black lg:w-10 lg:h-10 w-10 h-10 flex justify-center items-center"
                       style={{
